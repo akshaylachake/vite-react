@@ -1,0 +1,23 @@
+@use "../../assets/style/main.scss" as *;
+
+.user-box-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 1rem 0 0;
+
+  .user-box {
+    flex: 0 0 calc(33.333% - 16px); /* 3 items per row with gap considered */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 1px solid $border-color;
+    border-radius: 0.5rem;
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
