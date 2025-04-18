@@ -23,8 +23,6 @@ function App() {
   }, []);
 
   const filteredData = useMemo(() => {
-    console.log(data);
-
     if (searchString.length > 1) {
       const found = data.filter((item) => {
         return item.email.includes(searchString);
@@ -39,8 +37,6 @@ function App() {
     const arr = single.length === 0 ? removeIds : single;
 
     const found = data.filter((item) => {
-      console.log(arr.includes(item.id));
-
       return !arr.includes(item.id);
     });
 
