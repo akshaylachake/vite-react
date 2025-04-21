@@ -44,19 +44,20 @@ function App() {
   };
 
   const addItem = () => {
-    setData([
-      ...data,
-      {
-        id: 999999,
-        firstName: "Akshay",
-        lastName: "Lachake",
-        maidenName: "Mahesh",
-        age: 31,
-        gender: "male",
-        email: "akshay.lachake@x.dummyjson.com",
-        image: viteLogo,
-      },
-    ]);
+    const newObj = {
+      id: 999999,
+      firstName: "Akshay",
+      lastName: "Lachake",
+      maidenName: "Mahesh",
+      age: 31,
+      gender: "male",
+      email: "akshay.lachake@x.dummyjson.com",
+      image: viteLogo,
+    };
+
+    setData([...data, newObj]); // insert as a last value in array
+    // setData([newObj, ...data]); // insert as a first value in array
+    // setData([...data.slice(0, 2), newObj, ...data.slice(2)]); // insert value at 2nd index in array
   };
 
   const addRemoveFromRemoveIds = (isChecked, id) => {
